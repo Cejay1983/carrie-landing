@@ -1,0 +1,41 @@
+name: Unpack landing page
+
+on:
+  push:
+    paths:
+      - '.github/workflows/unpack.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract landing page package
+        run: |
+          python - <<'PY'
+          import zipfile, os
+          z='carrie-landing.zip'
+          with zipfile.ZipFile(z) as f:
+              for info in f.infolist():
+                  name=info.filename.replace('\\','/')
+                  if not name or name.endswith('/'):
+                      continue
+                  target=os.path.normpath(name)
+                  if target.startswith('..') or os.path.isabs(target):
+                      raise RuntimeError(f'Unsafe path: {name}')
+                  os.makedirs(os.path.dirname(target) or '.', exist_ok=True)
+                  with open(target,'wb') as out:
+                      out.write(f.read(info))
+          PY
+      - name: Commit extracted site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html quiz.html checklist.html questions.html privacy.html terms.html images
+          git diff --cached --quiet && exit 0
+          git commit -m "Deploy landing page files"
+          git push
