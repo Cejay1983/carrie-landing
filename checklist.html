@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Before-Tax-Season Systems Checklist | Carrie Jones</title>
+<meta name="description" content="Everything a tax professional should have in place before January, so January stays calm.">
+<link rel="icon" href="images/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#00882b;--green-dark:#046a24;--green-soft:#e6f4ea;
+    --gold:#d9b84a;--gold-light:#ebd562;
+    --black:#111111;--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;
+    --bg:#f6f7f4;--card:#ffffff;--radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:520px;margin:0 auto;padding:0 18px 56px}
+
+  .top{display:flex;align-items:center;justify-content:space-between;padding:18px 0 6px}
+  .top .logo{height:56px;width:auto;margin-left:-10px}
+  .back{font-size:13px;font-weight:700;color:var(--green);padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+
+  .head{text-align:center;padding:14px 0 6px}
+  .eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+  h1{font-size:27px;line-height:1.15;font-weight:800;letter-spacing:-.4px;color:var(--black)}
+  .lead{font-size:15px;color:var(--muted);margin-top:8px}
+
+  .sticky{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0 8px}
+  .progress{height:10px;background:#e3e6e0;border-radius:999px;overflow:hidden}
+  .progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--gold-light));transition:width .3s ease}
+  .count{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:var(--muted);margin-top:6px}
+  .count b{color:var(--green)}
+
+  section{margin-top:22px}
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .sec .band{height:6px;background:linear-gradient(90deg,var(--green),var(--gold-light))}
+  .sec .hd{padding:16px 18px 6px}
+  .sec .hd .n{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:var(--green-soft);padding:4px 10px;border-radius:999px}
+  .sec h2{font-size:19px;font-weight:800;color:var(--black);margin-top:8px;line-height:1.2}
+  .sec .why{font-size:13px;color:var(--muted);margin-top:4px}
+  .items{padding:8px 10px 12px}
+  label.it{
+    display:flex;gap:12px;align-items:flex-start;
+    padding:12px 8px;border-radius:12px;cursor:pointer;transition:.15s;
+  }
+  label.it:hover{background:var(--green-soft)}
+  label.it input{
+    appearance:none;-webkit-appearance:none;flex:0 0 24px;width:24px;height:24px;margin-top:1px;
+    border:2px solid #c9cfc9;border-radius:8px;background:#fff;position:relative;cursor:pointer;
+  }
+  label.it input:checked{background:var(--green);border-color:var(--green)}
+  label.it input:checked:after{content:"";position:absolute;left:7px;top:3px;width:6px;height:11px;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}
+  label.it .t{flex:1}
+  label.it .t b{display:block;font-size:15px;font-weight:700;color:var(--black);line-height:1.3}
+  label.it .t span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+  label.it input:checked ~ .t b{text-decoration:line-through;color:var(--muted)}
+  .star{color:var(--gold);font-weight:800;margin-left:4px}
+
+  .cta{background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);color:#fff;border-radius:var(--radius);padding:24px 20px;text-align:center;margin-top:28px}
+  .cta h2{color:#fff;font-size:22px;font-weight:800;line-height:1.2}
+  .cta p{font-size:14px;opacity:.92;margin-top:8px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px 20px;border-radius:14px;font-weight:800;font-size:16px;transition:.2s;border:2px solid transparent;margin-top:16px}
+  .btn-gold{background:var(--gold-light);color:var(--black);border-color:var(--gold-light)}
+  .btn-gold:hover{background:#fff}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6);margin-top:10px}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+
+  .tools{display:flex;gap:10px;margin-top:18px}
+  .tools button{flex:1;font:inherit;font-size:13px;font-weight:700;color:var(--green);background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;cursor:pointer}
+  .tools button:hover{background:var(--green-soft)}
+
+  footer{text-align:center;font-size:12px;color:var(--muted);margin-top:36px;padding-top:18px;border-top:1px solid var(--line)}
+  footer a{color:var(--green);font-weight:700}
+
+  @media print{
+    .sticky,.tools,.cta,.back{display:none}
+    body{background:#fff}
+    .sec{break-inside:avoid;border:1px solid #ccc}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <a href="index.html" aria-label="Back to Carrie's page"><img class="logo" src="images/logo.png" alt="1st Choice Tax & Business Solutions"></a>
+    <a class="back" href="index.html">← Back</a>
+  </div>
+
+  <div class="head">
+    <div class="eyebrow">Free checklist</div>
+    <h1>Before-Tax-Season Systems Checklist</h1>
+    <p class="lead">What to have in place before January, so January stays calm. Tap each one as you knock it out. It saves on your phone.</p>
+  </div>
+
+  <div class="sticky">
+    <div class="progress"><i id="bar"></i></div>
+    <div class="count"><span><b id="done">0</b> of <span id="total">0</span> done</span><span id="msg">Let's go</span></div>
+  </div>
+
+  <!-- ===== 1. CREDENTIALS ===== -->
+  <section>
+    <div class="sec">
+      <div class="band"></div>
+      <div class="hd">
+        <span class="n">1 · Credentials</span>
+        <h2>Are you legal to file?</h2>
+        <div class="why">Do these first. Nothing else matters if these lapse.</div>
+      </div>
+      <div class="items">
+        <label class="it"><input type="checkbox" data-k="ptin"><div class="t"><b>PTIN renewed for the new year</b><span>Renewal opens mid-October and your PTIN expires December 31. Do it now, not in January.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="efin"><div class="t"><b>EFIN active and your e-Services account up to date</b><span>If you have your own EFIN, log in and confirm nothing needs updating. If you file under a service bureau, confirm you're set up under theirs.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="state"><div class="t"><b>State registration renewed</b><span>California preparers: CTEC renewal is due October 31 every year. Check your own state's rule if you're outside CA.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="ce"><div class="t"><b>Continuing education done</b><span>Get your hours in before the season, not during it. Keep the certificates in one folder.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="wisp"><div class="t"><b>Written security plan on file (WISP)</b><span>The IRS requires every preparer to have one. If you don't, that's a same-day fix with a template.</span></div></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. SOFTWARE & MONEY ===== -->
+  <section>
+    <div class="sec">
+      <div class="band"></div>
+      <div class="hd">
+        <span class="n">2 · Software + bank products</span>
+        <h2>Can you actually file and get paid?</h2>
+        <div class="why">The two Carrie sees people skip until it's too late.</div>
+      </div>
+      <div class="items">
+        <label class="it"><input type="checkbox" data-k="software"><div class="t"><b>Professional tax software chosen, paid for, and installed <span class="star">★</span></b><span>Logged in, updated, and you've clicked around in it. Don't meet your software for the first time on a client's return.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="rollover"><div class="t"><b>Last year's clients rolled over into this year's software</b><span>Prior-year data converted or imported so returning clients aren't typed in from scratch.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="bank"><div class="t"><b>Bank products enrolled and approved <span class="star">★</span></b><span>Refund transfers and advances have an enrollment cutoff, usually in December. Miss it and you lose those clients to somebody who didn't.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="fees"><div class="t"><b>Fee schedule set and written down</b><span>Per-form or flat, decide now. Nobody should have to guess your price in January, including you.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="pay"><div class="t"><b>A way to take payment</b><span>Card, Cash App, Zelle, or fees pulled from the refund. Pick your options and test one payment.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="support"><div class="t"><b>You know who to call when the software breaks</b><span>Save the support number and your account number in your phone. Support that disappears in February is a real thing.</span></div></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. CLIENT SYSTEMS ===== -->
+  <section>
+    <div class="sec">
+      <div class="band"></div>
+      <div class="hd">
+        <span class="n">3 · Client systems</span>
+        <h2>Can a client go from "hey" to "filed" without chaos?</h2>
+        <div class="why">Every one of these is a text you won't have to send twice.</div>
+      </div>
+      <div class="items">
+        <label class="it"><input type="checkbox" data-k="intake"><div class="t"><b>Intake form or organizer updated for this year</b><span>Name, dependents, income types, life changes. One form, every client, no exceptions.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="engage"><div class="t"><b>Engagement letter ready</b><span>What you do, what they owe, when it's due. Protects you both. Sign before you start the return.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="bring"><div class="t"><b>A "what to bring" list you can text to anyone</b><span>IDs, Social Security cards, W-2s, 1099s, last year's return, childcare info. Save it as a note so it's one copy-paste.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="portal"><div class="t"><b>A secure way to receive documents</b><span>A client portal or secure upload. Photos of W-2s in text messages are how documents get lost.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="esign"><div class="t"><b>E-signature set up and tested</b><span>Form 8879 signed from their phone. Test it on yourself once.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="sched"><div class="t"><b>Booking link or appointment system live</b><span>Clients book themselves. Your DMs stop being your calendar.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="files"><div class="t"><b>File storage and backup set up</b><span>One folder per client, cloud-backed, password on everything, two-factor turned on.</span></div></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. MARKETING ===== -->
+  <section>
+    <div class="sec">
+      <div class="band"></div>
+      <div class="hd">
+        <span class="n">4 · Marketing</span>
+        <h2>Do people know you're open?</h2>
+        <div class="why">Done in December, this is what makes January busy in the good way.</div>
+      </div>
+      <div class="items">
+        <label class="it"><input type="checkbox" data-k="reach"><div class="t"><b>Last year's clients contacted before January</b><span>One text: "Tax season's coming, here's my booking link." Do it the first week of December.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="gbp"><div class="t"><b>Google Business Profile updated</b><span>Hours, phone, address, a fresh photo. This is where "tax preparer near me" finds you.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="bio"><div class="t"><b>Social bios and link-in-bio updated</b><span>Say what you do, who it's for, and how to book. One link that has everything.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="posts"><div class="t"><b>First two weeks of January posts already made</b><span>You won't have time to make content in January. Batch it now.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="referral"><div class="t"><b>Referral offer decided</b><span>What does a client get for sending you a friend? Decide it and say it out loud on every call.</span></div></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. YOU ===== -->
+  <section>
+    <div class="sec">
+      <div class="band"></div>
+      <div class="hd">
+        <span class="n">5 · You</span>
+        <h2>Will you survive the season?</h2>
+        <div class="why">The part nobody puts on a checklist.</div>
+      </div>
+      <div class="items">
+        <label class="it"><input type="checkbox" data-k="hours"><div class="t"><b>Office hours decided and posted</b><span>When you take appointments and when you don't. Write it down before the first client asks.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="books"><div class="t"><b>Your own bookkeeping caught up</b><span>Business account separate, receipts sorted. You know why.</span></div></label>
+        <label class="it"><input type="checkbox" data-k="mentor"><div class="t"><b>Somebody experienced you can call when a return gets weird</b><span>A mentor, a bureau, a group. Figure out who before you need them at 9 PM in February.</span></div></label>
+      </div>
+    </div>
+  </section>
+
+  <div class="tools">
+    <button type="button" id="print">Print this</button>
+    <button type="button" id="reset">Start over</button>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>The ★ ones are the two that sink people.</h2>
+    <p>Software and bank products have deadlines and a learning curve. If you'd rather have both handled, with a real person to call all season, that's what 1st Choice does.</p>
+    <a class="btn btn-gold" href="https://api.taxnitro.com/widget/bookings/firstchoicetaxpros" target="_blank" rel="noopener">Book a free software discovery call</a>
+    <a class="btn btn-ghost" href="index.html#programs">See the programs</a>
+  </div>
+
+  <footer>
+    © <span id="yr"></span> 1st Choice Tax &amp; Business Solutions, LLC ·
+    <a href="https://1stchoicesolutionsllc.com" target="_blank" rel="noopener">1stchoicesolutionsllc.com</a><br>
+    <span style="display:block;margin-top:6px">General guidance for tax professionals. Confirm deadlines with the IRS and your state each year.</span>
+  </footer>
+</div>
+
+<script>
+  const KEY='carrie-checklist-v1';
+  const boxes=[...document.querySelectorAll('input[type=checkbox]')];
+  const $=id=>document.getElementById(id);
+  let saved={}; try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  boxes.forEach(b=>{ b.checked=!!saved[b.dataset.k]; b.addEventListener('change',()=>{ saved[b.dataset.k]=b.checked; try{localStorage.setItem(KEY,JSON.stringify(saved))}catch(e){} update(); }); });
+  function update(){
+    const d=boxes.filter(b=>b.checked).length, t=boxes.length;
+    $('done').textContent=d; $('total').textContent=t;
+    $('bar').style.width=(d/t*100)+'%';
+    $('msg').textContent = d===0?"Let's go" : d===t?"January is going to be calm." : d/t>=.66?"Almost there" : d/t>=.33?"Good momentum" : "Keep going";
+  }
+  $('print').onclick=()=>window.print();
+  $('reset').onclick=()=>{ if(confirm('Clear all your checkmarks?')){ saved={}; try{localStorage.removeItem(KEY)}catch(e){} boxes.forEach(b=>b.checked=false); update(); } };
+  $('yr').textContent=new Date().getFullYear();
+  update();
+</script>
+</body>
+</html>

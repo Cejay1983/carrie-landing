@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Which tax business program fits you? | Carrie Jones</title>
+<meta name="description" content="Four quick questions. Find out whether you need software, a service bureau behind you, or training first.">
+<link rel="icon" href="images/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#00882b;--green-dark:#046a24;--green-soft:#e6f4ea;
+    --gold:#d9b84a;--gold-light:#ebd562;
+    --black:#111111;--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;
+    --bg:#f6f7f4;--card:#ffffff;--radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:520px;margin:0 auto;padding:0 18px 56px}
+
+  .top{display:flex;align-items:center;justify-content:space-between;padding:18px 0 6px}
+  .top .logo{height:56px;width:auto;margin-left:-10px}
+  .back{font-size:13px;font-weight:700;color:var(--green);padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+
+  .head{text-align:center;padding:18px 0 8px}
+  .eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+  h1{font-size:26px;line-height:1.15;font-weight:800;letter-spacing:-.4px;color:var(--black)}
+  .lead{font-size:15px;color:var(--muted);margin-top:8px}
+
+  .progress{height:8px;background:#e3e6e0;border-radius:999px;overflow:hidden;margin:20px 0 6px}
+  .progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--gold-light));transition:width .35s ease}
+  .step{font-size:12px;font-weight:700;color:var(--muted);text-align:right}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;margin-top:14px}
+  .q{font-size:20px;font-weight:800;color:var(--black);line-height:1.25}
+  .opts{display:grid;gap:10px;margin-top:16px}
+  .opt{
+    width:100%;text-align:left;font:inherit;cursor:pointer;
+    background:#fff;border:2px solid var(--line);border-radius:14px;
+    padding:14px 16px;font-size:15px;font-weight:600;color:var(--ink);
+    display:flex;gap:12px;align-items:flex-start;transition:.15s;
+  }
+  .opt .k{flex:0 0 28px;width:28px;height:28px;border-radius:50%;background:var(--green-soft);color:var(--green);font-weight:800;font-size:13px;display:grid;place-items:center;margin-top:1px}
+  .opt:hover{border-color:var(--green);background:var(--green-soft)}
+  .opt:active{transform:scale(.99)}
+  .nav{display:flex;justify-content:space-between;margin-top:14px}
+  .link{font-size:13px;font-weight:700;color:var(--muted);background:none;border:none;cursor:pointer;font-family:inherit;padding:6px 0}
+  .link:hover{color:var(--green)}
+
+  /* result */
+  .result{display:none}
+  .badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:var(--green-soft);padding:6px 12px;border-radius:999px}
+  .result h2{font-size:26px;font-weight:800;color:var(--black);line-height:1.15;margin-top:10px;letter-spacing:-.3px}
+  .result .you{font-size:16px;color:var(--ink);margin-top:10px}
+  .offer{background:var(--card);border:2px solid var(--green);border-radius:var(--radius);overflow:hidden;margin-top:18px}
+  .offer .band{height:8px;background:linear-gradient(90deg,var(--green),var(--gold-light))}
+  .offer .body{padding:20px}
+  .offer h3{font-size:19px;font-weight:800;color:var(--black)}
+  .offer p{font-size:15px;margin-top:8px}
+  .offer ul{list-style:none;margin:12px 0 0;display:grid;gap:6px}
+  .offer li{font-size:14px;padding-left:22px;position:relative}
+  .offer li:before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:50%;background:var(--gold-light)}
+  .btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:16px 20px;border-radius:14px;font-weight:800;font-size:16px;transition:.2s;border:2px solid transparent;margin-top:16px}
+  .btn-green{background:var(--green);color:#fff;border-color:var(--gold-light)}
+  .btn-green:hover{background:var(--black);border-color:var(--black)}
+  .btn-outline{background:#fff;color:var(--green);border-color:var(--green);margin-top:10px}
+  .btn-outline:hover{background:var(--green-soft)}
+  .fine{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
+  .alt{margin-top:22px;font-size:14px;color:var(--muted);text-align:center}
+  .alt a{color:var(--green);font-weight:700}
+
+  footer{text-align:center;font-size:12px;color:var(--muted);margin-top:36px;padding-top:18px;border-top:1px solid var(--line)}
+  footer a{color:var(--green);font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <a href="index.html" aria-label="Back to Carrie's page"><img class="logo" src="images/logo.png" alt="1st Choice Tax & Business Solutions"></a>
+    <a class="back" href="index.html">← Back</a>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz">
+    <div class="head">
+      <div class="eyebrow">2-minute quiz</div>
+      <h1>Which tax business program fits you?</h1>
+      <p class="lead">Four honest answers. One straight recommendation.</p>
+    </div>
+
+    <div class="progress"><i id="bar"></i></div>
+    <div class="step" id="step">Question 1 of 4</div>
+
+    <div class="card">
+      <div class="q" id="q"></div>
+      <div class="opts" id="opts"></div>
+      <div class="nav">
+        <button class="link" id="prev" type="button">← Previous</button>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULT -->
+  <div id="result" class="result">
+    <div class="head" style="text-align:left;padding-top:10px">
+      <span class="badge" id="r-badge"></span>
+      <h2 id="r-title"></h2>
+      <p class="you" id="r-you"></p>
+    </div>
+    <div class="offer">
+      <div class="band"></div>
+      <div class="body">
+        <h3 id="r-offer"></h3>
+        <p id="r-desc"></p>
+        <ul id="r-list"></ul>
+        <a class="btn btn-green" id="r-cta" href="#" target="_blank" rel="noopener"></a>
+        <a class="btn btn-outline" href="index.html#programs">See all three programs</a>
+      </div>
+    </div>
+    <p class="fine" id="r-fine"></p>
+    <p class="alt"><a href="#" id="retake">Retake the quiz</a></p>
+  </div>
+
+  <footer>
+    © <span id="yr"></span> 1st Choice Tax &amp; Business Solutions, LLC ·
+    <a href="https://1stchoicesolutionsllc.com" target="_blank" rel="noopener">1stchoicesolutionsllc.com</a>
+  </footer>
+</div>
+
+<script>
+/* ---------- EDIT HERE ON THE CALL ----------
+   Three outcomes: software (ERO with own EFIN) · affiliate (PTIN, no EFIN) · training (new / not confident yet)
+   Each option carries the outcome it points to. Question 1 breaks ties. */
+// Two real calendars on her TaxNitro account:
+const BOOK_SOFTWARE  = "https://api.taxnitro.com/widget/bookings/firstchoicetaxpros"; // "1st Choice Tax Software Discovery Call" (30 min)
+const BOOK_AFFILIATE = "https://api.taxnitro.com/widget/bookings/1stchoicetaxpros";   // "1st Choice Tax Affiliate PTIN Program" (30 min)
+
+const QUESTIONS = [
+  {
+    q: "Where are you in your tax business right now?",
+    opts: [
+      { t: "I've never prepared taxes for pay, or I just got my PTIN and I'm figuring it out", v: "training" },
+      { t: "I have my PTIN and I've done returns, but I don't have my own EFIN", v: "affiliate" },
+      { t: "I have my own EFIN and I file under my own office", v: "software" }
+    ]
+  },
+  {
+    q: "Be honest. What was the biggest headache last season?",
+    opts: [
+      { t: "I didn't feel ready. Too many things I had to look up or guess on", v: "training" },
+      { t: "I had clients, but no real support, no bank products, no marketing behind me", v: "affiliate" },
+      { t: "My software. Clunky, expensive, or the support disappeared in February", v: "software" }
+    ]
+  },
+  {
+    q: "What do you want next season to look like?",
+    opts: [
+      { t: "Confidently preparing returns and actually getting paid for it", v: "training" },
+      { t: "Making more per return, earning on referrals, with a bureau that answers the phone", v: "affiliate" },
+      { t: "Running my own office on software I control, unlimited e-file, no ceiling", v: "software" }
+    ]
+  },
+  {
+    q: "How do you feel about professional tax software?",
+    opts: [
+      { t: "I've never used it. I'd need somebody to walk me through it", v: "training" },
+      { t: "I use whatever the office gives me. I've never picked my own", v: "affiliate" },
+      { t: "I know what I want. I'm ready to run my own", v: "software" }
+    ]
+  }
+];
+
+const RESULTS = {
+  software: {
+    badge: "You're the ERO",
+    title: "You already run the office. Now run it on software that shows up.",
+    you: "You have your EFIN, you have clients, and you don't need anybody to teach you the job. What you need is software that keeps up with you all season and support that still picks up in February.",
+    offer: "1st Choice Tax Pros Software",
+    desc: "Cloud-based professional tax software for preparers anywhere in the USA. Your whole season from your laptop or your phone.",
+    list: ["Unlimited e-filing, paperless from day one", "Bank products built in", "Real 24/7 tech support during the season", "Mobile app for you and your clients"],
+    cta: "Book a free software discovery call",
+    book: BOOK_SOFTWARE,
+    fine: "30 minutes. See it running before you decide anything."
+  },
+  affiliate: {
+    badge: "You're the PTIN Affiliate",
+    title: "You can do the returns. You've been doing them without a bureau behind you.",
+    you: "You have your PTIN and you've put in real seasons. What's missing is the structure: your own software access, bank products, marketing, and somebody experienced to call when a return gets weird. That's what a service bureau is for.",
+    offer: "Affiliate Program",
+    desc: "File under Carrie's service bureau. Software access, marketing materials, and commissions on top, without needing your own EFIN.",
+    list: ["Competitive commissions", "Access to the software + marketing materials", "Support to expand your business", "PTIN · ERO · Service Bureau backing"],
+    cta: "Book the Affiliate PTIN call",
+    book: BOOK_AFFILIATE,
+    fine: "30 minutes. Bring your questions. She'll tell you straight if it's a fit."
+  },
+  training: {
+    badge: "You're the Rising Preparer",
+    title: "You're close. You need the training and the bureau at the same time.",
+    you: "You're serious about this, and you're honest that there are gaps. Good. The fastest way through is learning the returns AND having a service bureau behind you from day one, so next season you're earning while you're learning.",
+    offer: "Affiliate + Tax Course Training",
+    desc: "Everything in the Affiliate Program plus the tax course, for the preparer who wants to walk into next season sharper than last season.",
+    list: ["Full affiliate membership", "Tax course training, live cohort", "Premium software access + marketing support", "Carrie in your corner all season"],
+    cta: "Book the Affiliate PTIN call",
+    book: BOOK_AFFILIATE,
+    fine: "30 minutes. Bring your questions. She'll tell you straight if it's a fit."
+  }
+};
+/* ---------- END EDIT ZONE ---------- */
+
+let i = 0, answers = [];
+const $ = id => document.getElementById(id);
+
+function render(){
+  const Q = QUESTIONS[i];
+  $('q').textContent = Q.q;
+  $('opts').innerHTML = '';
+  Q.opts.forEach((o, n) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'opt';
+    b.innerHTML = '<span class="k">' + 'ABC'[n] + '</span><span>' + o.t + '</span>';
+    b.onclick = () => { answers[i] = o.v; i++; i < QUESTIONS.length ? render() : finish(); };
+    $('opts').appendChild(b);
+  });
+  $('bar').style.width = ((i) / QUESTIONS.length * 100) + '%';
+  $('step').textContent = 'Question ' + (i+1) + ' of ' + QUESTIONS.length;
+  $('prev').style.visibility = i === 0 ? 'hidden' : 'visible';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function finish(){
+  const score = { software:0, affiliate:0, training:0 };
+  answers.forEach(v => score[v]++);
+  let best = Object.keys(score).sort((a,b) => score[b]-score[a]);
+  // tie-break: question 1 wins
+  if (score[best[0]] === score[best[1]]) best[0] = answers[0];
+  const R = RESULTS[best[0]];
+  $('r-badge').textContent = R.badge;
+  $('r-title').textContent = R.title;
+  $('r-you').textContent = R.you;
+  $('r-offer').textContent = R.offer;
+  $('r-desc').textContent = R.desc;
+  $('r-list').innerHTML = R.list.map(x => '<li>' + x + '</li>').join('');
+  $('r-cta').textContent = R.cta; $('r-cta').href = R.book;
+  $('r-fine').textContent = R.fine;
+  $('quiz').style.display = 'none'; $('result').style.display = 'block';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+$('prev').onclick = () => { if (i > 0) { i--; render(); } };
+$('retake').onclick = e => { e.preventDefault(); i = 0; answers = []; $('result').style.display='none'; $('quiz').style.display='block'; render(); };
+$('yr').textContent = new Date().getFullYear();
+render();
+</script>
+</body>
+</html>

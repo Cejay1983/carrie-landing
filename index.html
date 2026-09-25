@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrie Jones | 1st Choice Tax & Business Solutions</title>
+<meta name="description" content="Tax software, training, and mentorship for tax professionals who want to build, operate, and grow a stronger tax business.">
+<link rel="icon" href="images/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#00882b;
+    --green-dark:#046a24;
+    --green-soft:#e6f4ea;
+    --gold:#d9b84a;
+    --gold-light:#ebd562;
+    --black:#111111;
+    --ink:#1f2937;
+    --muted:#6b7280;
+    --line:#e5e7eb;
+    --bg:#f6f7f4;
+    --card:#ffffff;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+
+  .wrap{max-width:520px;margin:0 auto;padding:0 18px 64px}
+
+  /* top bar */
+  .top{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 0 6px;
+  }
+  .top .logo{height:56px;width:auto;margin-left:-10px}
+  .socials{display:flex;gap:8px}
+  .socials a{
+    width:38px;height:38px;border-radius:50%;
+    display:grid;place-items:center;
+    background:#fff;border:1px solid var(--line);
+    color:var(--green);transition:.2s;
+  }
+  .socials a:hover{background:var(--green);color:#fff;border-color:var(--green)}
+  .socials svg{width:18px;height:18px;fill:currentColor}
+
+  /* hero */
+  .hero{
+    text-align:center;
+    padding:22px 0 10px;
+  }
+  .avatar{
+    width:168px;height:168px;border-radius:50%;
+    margin:0 auto 18px;
+    background:var(--green);
+    padding:5px;
+    box-shadow:0 12px 30px rgba(0,136,43,.22);
+  }
+  .avatar img{
+    width:100%;height:100%;border-radius:50%;
+    object-fit:cover;object-position:50% 50%;
+    border:3px solid var(--gold-light);
+  }
+  .hi{
+    font-size:14px;font-weight:700;letter-spacing:.02em;
+    color:var(--green);margin-bottom:6px;
+  }
+  h1{
+    font-size:30px;line-height:1.15;font-weight:800;
+    letter-spacing:-.5px;color:var(--black);
+  }
+  .role{
+    display:inline-block;margin:12px 0 14px;
+    padding:7px 16px;border-radius:999px;
+    background:#fff;border:1px solid var(--gold-light);
+    font-size:13px;font-weight:700;color:var(--black);
+  }
+  .blurb{font-size:16px;color:var(--ink);max-width:420px;margin:0 auto}
+  .blurb b{color:var(--green)}
+
+  /* buttons */
+  .btn{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    width:100%;padding:16px 20px;border-radius:14px;
+    font-weight:800;font-size:16px;letter-spacing:.01em;
+    transition:.2s;border:2px solid transparent;
+  }
+  .btn-green{background:var(--green);color:#fff;border-color:var(--gold-light)}
+  .btn-green:hover{background:var(--black);border-color:var(--black)}
+  .btn-outline{background:#fff;color:var(--green);border-color:var(--green)}
+  .btn-outline:hover{background:var(--green-soft)}
+  .btn-dark{background:var(--black);color:#fff}
+  .btn-dark:hover{background:var(--green)}
+  .btn svg{width:18px;height:18px;fill:currentColor}
+  .hero .btn{margin-top:22px}
+  .hero .note{font-size:13px;color:var(--muted);margin-top:10px}
+
+  /* sections */
+  section{margin-top:38px}
+  .eyebrow{
+    font-size:12px;font-weight:800;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--green);margin-bottom:6px;
+  }
+  h2{font-size:24px;font-weight:800;letter-spacing:-.3px;color:var(--black);line-height:1.2}
+  .lead{font-size:15px;color:var(--muted);margin-top:6px}
+
+  .stack{display:grid;gap:12px;margin-top:18px}
+
+  /* link cards (lead magnets) */
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:18px 18px;
+    display:flex;align-items:center;gap:14px;
+    transition:.2s;
+  }
+  .card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.07);border-color:var(--gold-light)}
+  .card .ic{
+    flex:0 0 46px;width:46px;height:46px;border-radius:14px;
+    background:var(--green-soft);color:var(--green);
+    display:grid;place-items:center;font-weight:800;font-size:18px;
+  }
+  .card .tx{flex:1}
+  .card .tx strong{display:block;font-size:16px;color:var(--black);font-weight:800;line-height:1.25}
+  .card .tx span{display:block;font-size:13px;color:var(--muted);margin-top:3px}
+  .card .go{
+    flex:0 0 auto;font-size:12px;font-weight:800;color:var(--green);
+    padding:8px 12px;border-radius:999px;background:var(--green-soft);white-space:nowrap;
+  }
+
+  /* offer cards */
+  .offer{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;
+  }
+  .offer .band{
+    height:8px;background:linear-gradient(90deg,var(--green),var(--gold-light));
+  }
+  .offer .body{padding:20px 20px 20px}
+  .offer .tag{
+    display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--green);background:var(--green-soft);
+    padding:5px 10px;border-radius:999px;margin-bottom:10px;
+  }
+  .offer h3{font-size:19px;font-weight:800;color:var(--black);line-height:1.2}
+  .offer p{font-size:15px;color:var(--ink);margin-top:8px}
+  .offer ul{list-style:none;margin:12px 0 0;display:grid;gap:6px}
+  .offer li{font-size:14px;color:var(--ink);padding-left:22px;position:relative}
+  .offer li:before{
+    content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:50%;
+    background:var(--gold-light);
+  }
+  .offer .btn{margin-top:16px}
+  .offer.featured{border:2px solid var(--green)}
+
+  /* proof — scrolling reviews */
+  .marquee{
+    margin-top:14px;
+    overflow:hidden;position:relative;
+  }
+  .marquee:before,.marquee:after{
+    content:"";position:absolute;top:0;bottom:0;width:28px;z-index:2;pointer-events:none;
+  }
+  .marquee:before{left:0;background:linear-gradient(90deg,var(--bg),rgba(246,247,244,0))}
+  .marquee:after{right:0;background:linear-gradient(270deg,var(--bg),rgba(246,247,244,0))}
+  .marquee.single:before,.marquee.single:after{display:none}
+  .track{
+    display:flex;gap:14px;width:max-content;
+    animation:slide 32s linear infinite;
+  }
+  .marquee:hover .track{animation-play-state:paused}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .review{
+    flex:0 0 290px;
+    background:var(--black);color:#fff;border-radius:var(--radius);
+    padding:20px 20px 18px;position:relative;overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .review:before{
+    content:"\201C";position:absolute;right:14px;top:-22px;
+    font-size:110px;font-weight:800;color:var(--green);opacity:.55;line-height:1;
+  }
+  .review .stars{color:var(--gold-light);letter-spacing:2px;font-size:15px;margin-bottom:8px}
+  .review p{font-size:14px;line-height:1.5;position:relative;flex:1}
+  .review .who{display:flex;align-items:center;gap:10px;margin-top:14px}
+  .review .who img,.review .who .ph{
+    width:40px;height:40px;border-radius:50%;object-fit:cover;
+    border:2px solid var(--gold-light);flex:0 0 40px;
+  }
+  .review .who .ph{background:var(--green);display:grid;place-items:center;font-weight:800;font-size:15px}
+  .review .who b{display:block;font-size:13px}
+  .review .who span{font-size:12px;color:#cfd4d0}
+  .review.placeholder{background:#2b2f2c;border:2px dashed var(--gold-light)}
+  @media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto}}
+
+  /* locations */
+  .loc{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:18px;display:grid;gap:14px;
+  }
+  .loc .row{display:flex;gap:12px;align-items:flex-start}
+  .loc .pin{flex:0 0 36px;width:36px;height:36px;border-radius:12px;background:var(--green-soft);color:var(--green);display:grid;place-items:center}
+  .loc .pin svg{width:18px;height:18px;fill:currentColor}
+  .loc b{display:block;font-size:15px;color:var(--black)}
+  .loc span{display:block;font-size:14px;color:var(--muted)}
+  .loc a.tel{color:var(--green);font-weight:700;font-size:14px}
+
+  /* email */
+  .email{
+    background:linear-gradient(135deg,var(--green) 0%,var(--green-dark) 100%);
+    color:#fff;border-radius:var(--radius);padding:24px 20px;text-align:center;
+  }
+  .email h2{color:#fff}
+  .email p{font-size:14px;opacity:.9;margin-top:6px}
+  .email form{display:grid;gap:10px;margin-top:16px}
+  .email input{
+    width:100%;padding:14px 16px;border-radius:12px;border:none;
+    font:inherit;font-size:15px;
+  }
+  .email .btn{background:var(--gold-light);color:var(--black);border-color:var(--gold-light)}
+  .email .btn:hover{background:#fff}
+
+  footer{
+    text-align:center;font-size:12px;color:var(--muted);
+    margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
+  }
+  footer a{color:var(--green);font-weight:700}
+  footer .logo{height:48px;margin:0 auto 10px;opacity:.9}
+
+  @media (min-width:600px){
+    h1{font-size:34px}
+    .wrap{padding-top:8px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- TOP BAR -->
+  <div class="top">
+    <a href="https://1stchoicesolutionsllc.com" aria-label="1st Choice Tax & Business Solutions website">
+      <img class="logo" src="images/logo.png" alt="1st Choice Tax & Business Solutions">
+    </a>
+    <div class="socials">
+      <a href="https://www.instagram.com/1stchoicetaxandbusiness/" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.1.6.6 1.3 1.1 2.1 1.4.8.3 1.7.5 3 .6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.1-1.4.6-.6 1.1-1.3 1.4-2.1.3-.8.5-1.7.6-3 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6c-.8-.3-1.7-.5-3-.6C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/1stchoicetaxandbusiness" aria-label="Facebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg>
+      </a>
+      <a href="tel:+13232031099" aria-label="Call">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+      </a>
+      <a href="https://1stchoicesolutionsllc.com" aria-label="Website" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-2.9a15.7 15.7 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a8.2 8.2 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4H4.3zm.8 2h2.9c.3 1.3.8 2.5 1.4 3.6A8 8 0 0 1 5.1 16zM8 8H5.1a8 8 0 0 1 4.3-3.6C8.8 5.5 8.3 6.7 8 8zm4 12c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4zm.3 5.6c.6-1.1 1.1-2.3 1.4-3.6h2.9a8 8 0 0 1-4.3 3.6zm1.7-5.6a16.5 16.5 0 0 0 0-4h3.4a8.2 8.2 0 0 1 0 4h-3.4z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="avatar"><img src="images/carrie.jpg" alt="Carrie Jones"></div>
+    <h1>Carrie Jones</h1>
+    <div class="role">Tax Software &amp; Training Mentor</div>
+    <p class="blurb">
+      I help tax professionals <b>build, operate, and grow</b> a stronger tax business.
+      Software that works, training that's practical, and support that stays on the phone all season.
+    </p>
+    <a class="btn btn-green" href="https://api.taxnitro.com/widget/bookings/firstchoicetaxpros" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14v11z"/></svg>
+      Book a free software discovery call
+    </a>
+    <div class="note">30 minutes. See it running before you decide anything.</div>
+  </div>
+
+  <!-- START HERE / FREE -->
+  <!-- CONFIRM WITH CARRIE ON THE CALL: which freebies exist + where each link goes. Placeholders point to her booking page for now. -->
+  <section id="start">
+    <div class="eyebrow">Start here</div>
+    <h2>Free stuff for tax pros</h2>
+    <p class="lead">Grab these first. No pitch, just the things I wish somebody handed me.</p>
+    <div class="stack">
+      <a class="card" href="quiz.html">
+        <div class="ic">?</div>
+        <div class="tx">
+          <strong>Which tax business program fits you?</strong>
+          <span>2-minute quiz. Answer honestly, get a straight answer.</span>
+        </div>
+        <div class="go">Take it</div>
+      </a>
+      <a class="card" href="checklist.html">
+        <div class="ic">✓</div>
+        <div class="tx">
+          <strong>Before-tax-season systems checklist</strong>
+          <span>26 things to have in place before January, so January stays calm.</span>
+        </div>
+        <div class="go">Open it</div>
+      </a>
+      <a class="card" href="questions.html">
+        <div class="ic">7</div>
+        <div class="tx">
+          <strong>7 questions to ask before you pick tax software</strong>
+          <span>Ask these and you'll never get stuck with software that ghosts you in February.</span>
+        </div>
+        <div class="go">Open it</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <!-- CONFIRM WITH CARRIE: program names, inclusions, and links. No prices shown on purpose. -->
+  <section id="programs">
+    <div class="eyebrow">Work with me</div>
+    <h2>Find the program that fits you</h2>
+    <p class="lead">Different tax pros need different support. Pick your level.</p>
+    <div class="stack">
+
+      <div class="offer featured">
+        <div class="band"></div>
+        <div class="body">
+          <span class="tag">Most popular</span>
+          <h3>1st Choice Tax Pros Software</h3>
+          <p>Cloud-based professional tax software for preparers anywhere in the USA. Run your whole season from your laptop or your phone.</p>
+          <ul>
+            <li>Unlimited e-filing, paperless from day one</li>
+            <li>Bank products built in</li>
+            <li>Real 24/7 tech support during the season</li>
+            <li>Mobile app for you and your clients</li>
+            <li>Rebate incentives for software owners</li>
+          </ul>
+          <a class="btn btn-green" href="https://api.taxnitro.com/widget/bookings/firstchoicetaxpros" target="_blank" rel="noopener">Book a free discovery call</a>
+        </div>
+      </div>
+
+      <div class="offer">
+        <div class="band"></div>
+        <div class="body">
+          <h3>Affiliate Program</h3>
+          <p>For the preparer who's ready to grow under a service bureau that actually picks up. Software access, marketing materials, and commissions on top.</p>
+          <ul>
+            <li>Competitive commissions</li>
+            <li>Access to the software + marketing materials</li>
+            <li>Support to expand your business</li>
+          </ul>
+          <a class="btn btn-outline" href="https://api.taxnitro.com/widget/bookings/1stchoicetaxpros" target="_blank" rel="noopener">Schedule a call</a>
+        </div>
+      </div>
+
+      <div class="offer">
+        <div class="band"></div>
+        <div class="body">
+          <h3>Affiliate + Tax Course Training</h3>
+          <p>Everything in the Affiliate Program plus the tax course, for the preparer who wants to walk into next season sharper than last season.</p>
+          <ul>
+            <li>Full affiliate membership</li>
+            <li>Tax course training</li>
+            <li>Premium software access + marketing support</li>
+          </ul>
+          <a class="btn btn-outline" href="https://api.taxnitro.com/widget/bookings/1stchoicetaxpros" target="_blank" rel="noopener">Schedule a call</a>
+        </div>
+      </div>
+
+      <!-- CONFIRM WITH CARRIE: Service Bureau program bullets + which calendar it books -->
+      <div class="offer">
+        <div class="band"></div>
+        <div class="body">
+          <h3>Service Bureau Program</h3>
+          <p>For the tax pro ready to run her own bureau. Bring preparers on under you, give them software and support, and earn on every office you build.</p>
+          <ul>
+            <li>Become a service bureau with 1st Choice behind you</li>
+            <li>Software for you and the preparers under you</li>
+            <li>Training + support to set up and grow your bureau</li>
+          </ul>
+          <a class="btn btn-outline" href="https://api.taxnitro.com/widget/bookings/firstchoicetaxpros" target="_blank" rel="noopener">Schedule a call</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROOF — scrolling reviews -->
+  <!-- CONFIRM WITH CARRIE: replace the two PLACEHOLDER cards with real reviews from her IG "Reviews" highlight. Never invent one. -->
+  <section id="proof">
+    <div class="eyebrow">What tax pros say</div>
+    <h2>Real people, real seasons</h2>
+    <div class="marquee">
+      <div class="track" id="track">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>"It was a pleasure working with Carrie. Love the attention and the help you gave me on growing as a tax preparer. I greatly recommend you to all my family and friends if they want to become a tax expert."</p>
+          <div class="who">
+            <img src="images/testimonial-susan.jpg" alt="Susan Duran">
+            <div><b>Susan Duran</b><span>N&amp;A Multi Service</span></div>
+          </div>
+        </div>
+        <!-- ADD MORE REVIEWS HERE. Copy this block once per review. The strip starts scrolling automatically once there are 2 or more.
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>"REVIEW TEXT"</p>
+          <div class="who">
+            <div class="ph">A</div>
+            <div><b>NAME</b><span>BUSINESS</span></div>
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section id="contact">
+    <div class="eyebrow">Come see us</div>
+    <h2>Two offices, one standard</h2>
+    <div class="loc" style="margin-top:14px">
+      <div class="row">
+        <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></div>
+        <div>
+          <b>Long Beach, CA</b>
+          <span>3808 Orange Ave</span>
+          <a class="tel" href="tel:+13232031099">(323) 203-1099</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></div>
+        <div>
+          <b>North Little Rock, AR</b>
+          <span>425 W Broadway St</span>
+          <a class="tel" href="tel:+15016158503">(501) 615-8503</a>
+        </div>
+      </div>
+      <a class="btn btn-dark" href="https://1stchoicesolutionsllc.com/contact-us/" target="_blank" rel="noopener">Send me a message</a>
+    </div>
+  </section>
+
+  <!-- EMAIL LIST -->
+  <!-- HIDDEN until Carrie has an email tool (Flodesk / Mailchimp). Swap the form action, then remove style="display:none". -->
+  <section id="emails" style="display:none">
+    <div class="email">
+      <h2>Get my emails, friend</h2>
+      <p>Tax season tips, software updates, and the stuff I only say to my list.</p>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="First name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+        <button class="btn" type="submit">Count me in</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <img class="logo" src="images/logo.png" alt="">
+    © <span id="yr"></span> 1st Choice Tax &amp; Business Solutions, LLC · Since 2012<br>
+    <a href="https://1stchoicesolutionsllc.com" target="_blank" rel="noopener">1stchoicesolutionsllc.com</a><br>
+    <span style="display:block;margin-top:8px">
+      <a href="privacy.html">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </span>
+  </footer>
+
+</div>
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // 2+ reviews: duplicate the cards once so the strip loops seamlessly. 1 review: show it still, full width.
+  var t=document.getElementById('track');
+  if(t.children.length>1){ t.innerHTML+=t.innerHTML; }
+  else { t.style.animation='none'; t.style.width='100%'; t.firstElementChild.style.flex='1 1 100%'; t.parentElement.classList.add('single'); }
+</script>
+</body>
+</html>

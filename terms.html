@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms & Conditions | 1st Choice Tax & Business Solutions</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="images/favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--green:#00882b;--gold-light:#ebd562;--black:#111;--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--bg:#f6f7f4;--card:#fff;--radius:20px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--green);font-weight:700;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:520px;margin:0 auto;padding:0 18px 56px}
+  .top{display:flex;align-items:center;justify-content:space-between;padding:18px 0 6px}
+  .top .logo{height:56px;width:auto;margin-left:-10px}
+  .back{font-size:13px;font-weight:700;color:var(--green);padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+  .eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin:16px 0 6px}
+  h1{font-size:26px;font-weight:800;letter-spacing:-.4px;color:var(--black);line-height:1.15}
+  .date{font-size:13px;color:var(--muted);margin-top:6px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 18px;margin-top:18px}
+  h2{font-size:16px;font-weight:800;color:var(--black);margin-top:18px}
+  h2:first-child{margin-top:0}
+  p{font-size:14px;margin-top:6px}
+  footer{text-align:center;font-size:12px;color:var(--muted);margin-top:36px;padding-top:18px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a href="index.html" aria-label="Back"><img class="logo" src="images/logo.png" alt="1st Choice Tax & Business Solutions"></a>
+    <a class="back" href="index.html">← Back</a>
+  </div>
+
+  <div class="eyebrow">Legal</div>
+  <h1>Terms &amp; Conditions</h1>
+  <div class="date">Last updated: <span id="date"></span></div>
+
+  <!-- CONFIRM WITH CARRIE: this is a plain-language starter. Have it reviewed before relying on it. -->
+  <div class="card">
+    <h2>Who we are</h2>
+    <p>This page and the pages linked from it are operated by 1st Choice Tax and Business Solutions, LLC ("1st Choice," "we," "us"), with offices in Long Beach, California and North Little Rock, Arkansas. By using this site you agree to these terms.</p>
+
+    <h2>What this site is for</h2>
+    <p>This site shares information about our tax software, affiliate and training programs, and service bureau program for tax professionals, and lets you book a call or download free resources. It is not a substitute for a signed program agreement.</p>
+
+    <h2>Free resources and quizzes</h2>
+    <p>Checklists, guides, and quiz results on this site are general information for tax professionals. They are not legal, tax, or financial advice for your specific situation, and they are not a guarantee of any result. Confirm deadlines and requirements with the IRS and your state each year.</p>
+
+    <h2>Programs, pricing, and enrollment</h2>
+    <p>Program details, inclusions, and pricing are described on a discovery call and in the written agreement you sign when you enroll. If anything on this site differs from your signed agreement, the agreement controls. Bank product availability, rebates, and incentives depend on the providers involved and on your enrollment and approval with them.</p>
+
+    <h2>No guarantee of income</h2>
+    <p>Any mention of commissions, rebates, incentives, or earnings describes what a program makes available. Your results depend on your own work, your clients, and factors outside our control. We do not promise any specific income.</p>
+
+    <h2>Booking a call</h2>
+    <p>Calls are booked through a third-party scheduling tool. The information you enter there is handled under that tool's terms as well as ours. Please book only if you intend to attend or cancel with notice.</p>
+
+    <h2>Your information</h2>
+    <p>How we collect and use personal information is explained in our <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <h2>Content and trademarks</h2>
+    <p>The text, images, logo, and resources on this site belong to 1st Choice Tax and Business Solutions, LLC. You may share links to this site freely. Please don't copy, resell, or rebrand our resources without written permission.</p>
+
+    <h2>Links to other sites</h2>
+    <p>Links to social media, scheduling tools, and other third-party sites are provided for convenience. We are not responsible for their content or their practices.</p>
+
+    <h2>Limitation of liability</h2>
+    <p>To the fullest extent allowed by law, 1st Choice is not liable for any loss or damage arising from your use of this site or its free resources. Nothing here limits rights you have under law that cannot be limited.</p>
+
+    <h2>Changes</h2>
+    <p>We may update these terms from time to time. The date at the top shows the latest version. Continued use of the site after a change means you accept the updated terms.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these terms: <a href="https://1stchoicesolutionsllc.com/contact-us/" target="_blank" rel="noopener">contact us here</a>, or call (323) 203-1099.</p>
+  </div>
+
+  <footer>© <span id="yr"></span> 1st Choice Tax &amp; Business Solutions, LLC</footer>
+</div>
+<script>
+  var d=new Date(); document.getElementById('yr').textContent=d.getFullYear();
+  document.getElementById('date').textContent=d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+</script>
+</body>
+</html>
